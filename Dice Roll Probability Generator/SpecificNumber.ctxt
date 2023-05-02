@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=SpecificNumber
+comment1.params=
+comment1.target=SpecificNumber()
+comment10.params=args
+comment10.target=void\ main(java.lang.String[])
+comment11.params=
+comment11.target=void\ run()
+comment2.params=evt
+comment2.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment3.params=evt
+comment3.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment4.params=
+comment4.target=java.lang.Integer\ getN()
+comment5.params=evt
+comment5.target=void\ calculate(java.awt.event.ActionEvent)
+comment6.params=
+comment6.target=int[]\ getInput()
+comment7.params=
+comment7.target=int[]\ getDice()
+comment8.params=evt
+comment8.target=void\ back(java.awt.event.ActionEvent)
+comment9.params=
+comment9.target=void\ generateMenu()
+numComments=12

@@ -1,0 +1,97 @@
+/**
+ * Write a description of class Calculations here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class Calculations
+{
+    public static String probability[] = new String[3];
+    
+    public static void simulation()
+    {
+        int n;
+        int win = 0;
+        int rollNumber = 0;
+        int rollResult[] = new int[30];
+        n = SpecificNumber.getN();
+        if (n == 1)
+        {
+            int diceInput[] = SpecificNumber.getDice();
+            int inputInput[] = SpecificNumber.getInput();
+            for (int v = 0; v < 10; v++)
+            {
+                for (int w = 0; v < 10; w++)
+                {
+                    for (int x = 0; x < 10; x++)
+                    {
+                        for (int y = diceInput[0]; y > 0; y--)
+                        {
+                            rollResult[rollNumber] = (int)(Math.random()*(4-1+1)+1);
+                            rollNumber++;
+                        }
+                        for (int y = diceInput[1]; y > 0; y--)
+                        {
+                            rollResult[rollNumber] = (int)(Math.random()*(6-1+1)+1);
+                            System.out.println(rollNumber);
+                            rollNumber++;
+                        }
+                        for (int y = diceInput[2]; y > 0; y--)
+                        {
+                            rollResult[rollNumber] = (int)(Math.random()*(8-1+1)+1);
+                            rollNumber++;
+                        }
+                        for (int y = diceInput[3]; y > 0; y--)
+                        {
+                            rollResult[rollNumber] = (int)(Math.random()*(10-1+1)+1);
+                            rollNumber++;
+                        }
+                        for (int y = diceInput[4]; y > 0; y--)
+                        {
+                            rollResult[rollNumber] = (int)(Math.random()*(12-1+1)+1);
+                            rollNumber++;
+                        }
+                        for (int y = diceInput[5]; y > 0; y--)
+                        {
+                            rollResult[rollNumber] = (int)(Math.random()*(20-1+1)+1);
+                            rollNumber++;
+                        }
+                        while (rollNumber > 0)
+                        {
+                            if (rollResult[rollNumber] == inputInput[0])
+                            {
+                                win++;
+                                rollNumber = 0;
+                            }
+ 
+                        }
+                    }
+                    if(v < 1 && w < 1)
+                    {
+                        probability[0] = win + "/10";
+                        System.out.println(probability[0]);
+                    }
+                }
+                if(v < 1)
+                {
+                    probability[1] = win + "/100";
+                    System.out.println(probability[1]);
+                }
+            }
+            probability[2] = win + "/1000";
+            System.out.println(probability[2]);
+        }
+        // SpecificNumberCombo n2 = new SpecificNumberCombo();
+        // n = n2.getN();
+        // if (n == 1)
+        // {
+            
+        // }
+        // SpecificNumberSum n3 = new SpecificNumberSum();
+        // n = n3.getN();
+        // if (n == 1)
+        // {
+            
+        // }
+    }
+}
